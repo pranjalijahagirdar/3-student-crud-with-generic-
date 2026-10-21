@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student crud(with generic)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1>Fetch Student Crud (with generic) </h1>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <h2>Student Info Form</h2>
+                    <div class="card-body">
+                        <form id="studentForm">
+                            <div class="form-group">
+                                <label for="contactControl">Contact :</label>
+                                <input class="form-control" id="contactControl" type="text">
+                            </div>
+                             <div class="form-group">
+                                <label for="emailControl">Email</label>
+                                <input class="form-control" id="emailControl" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="fnameControl">First Name</label>
+                                <input class="form-control" id="fnameControl" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="lnameControl">Last Name</label>
+                                <input class="form-control" id="lnameControl" type="text">
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-block btn-primary" id="addStdBtn">Add Student</button>
+                            <button type="button" class="btn btn-sm btn-block btn-danger d-none" id="updateStdBtn">Update Student</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-bordered tableStd">
+                    <thead class="heads">
+                        <tr>
+                            <th>Contact</th>
+                            <th>Email</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stdList">
+                        <!-- <tr>
+                            <td>5667767687</td>
+                            <td>priya@gmail.com</td>
+                            <td>priya</td>
+                            <td>mane</td>
+                            <td class="text-center">
+                                 <i class="fa-solid fa-pen-to-square fa-2x text-primary" role="button"></i>
+                            </td>
+                            <td class="text-center">
+                               <i class="fa-solid fa-trash fa-2x text-danger" role="button"></i>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="spinner d-none" id="spinner">
+        <div class="spinner-border text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
